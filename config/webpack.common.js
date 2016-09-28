@@ -30,6 +30,15 @@ var config = {
         ].join('!'))
       },
       {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract('style-loader', [
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+          'postcss-loader',
+          'autoprefixer-loader?{browsers: ["last 2 versions", "> 1%", "ie 9", "firefox >= 21", "safari >= 5"], cascade: false}',
+          'less'
+        ].join('!'))
+      },
+      {
         test: /\.json$/,
         loader: 'json-loader'
       }

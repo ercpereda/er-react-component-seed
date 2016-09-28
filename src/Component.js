@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Component.css';
+import styles from './Component.less';
 
 const Component = props => (
   <div className={styles.component}>
